@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Agentic AI Honeypot</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:#0f172a;
+    color:white;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+.sidebar{
+    width:240px;
+    background:#020617;
+    padding:20px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.menu{
+    padding:12px;
+    margin:10px 0;
+    background:#0f172a;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.menu:hover{
+    background:#1e293b;
+}
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:#020617;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 0 20px rgba(0,255,200,.08);
+}
+
+.alert{
+    border-left:6px solid #22c55e;
+}
+
+.btn{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-top:10px;
+    cursor:pointer;
+    width:100%;
+}
+
+.primary{
+    background:#22c55e;
+}
+
+.secondary{
+    background:#1e293b;
+    color:white;
+}
+
+.chatbox{
+    height:280px;
+    overflow-y:auto;
+    margin-bottom:10px;
+}
+
+.msg{
+    background:#1e293b;
+    padding:10px;
+    border-radius:8px;
+    margin:8px 0;
+}
+
+.user{
+    text-align:right;
+    background:#22c55e;
+    color:black;
+}
+
+.input-area{
+    display:flex;
+}
+
+input{
+    flex:1;
+    padding:12px;
+    border:none;
+}
+
+.send{
+    width:90px;
+    background:#22c55e;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border-bottom:1px solid #1e293b;
+}
+
+.risk{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div class="logo">
+🛡 AI Honeypot
+</div>
+
+<div class="menu">Dashboard</div>
+<div class="menu">Live Logs</div>
+<div class="menu">Settings</div>
+
+
+</div>
+
+
+
+<div class="main">
+
+<h2>Cybersecurity Dashboard</h2>
+
+<div class="grid">
+
+
+<div class="card alert">
+
+<h3>⚠ Possible Scam Detected</h3>
+
+<p>Risk Score: <b>92%</b></p>
+
+<button class="btn primary">
+Hand-off to AI Honeypot
+</button>
+
+<button class="btn secondary">
+Ignore
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Live Honeypot Chat</h3>
+
+<div class="chatbox" id="chat">
+
+<div class="msg">
+Transfer ₹5000 to verify your account.
+</div>
+
+<div class="msg user">
+Sure, sending now...
+</div>
+
+</div>
+
+<div class="input-area">
+<input id="msg" placeholder="Type message..." />
+<button class="send" onclick="sendMsg()">Send</button>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card" style="margin-top:20px;">
+
+<h3>Extracted Evidence</h3>
+
+<table>
+
+<tr>
+<th>Phone</th>
+<th>UPI</th>
+<th>Phishing</th>
+<th>Risk</th>
+</tr>
+
+<tr>
+<td>9876543210</td>
+<td>scam@upi</td>
+<td>fakebank.link</td>
+<td class="risk">91%</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</div>
+
+
+<script>
+
+function sendMsg(){
+
+let input=document.getElementById("msg");
+
+let chat=document.getElementById("chat");
+
+let div=document.createElement("div");
+
+div.className="msg user";
+div.innerText=input.value;
+
+chat.appendChild(div);
+
+input.value="";
+
+setTimeout(()=>{
+
+let reply=document.createElement("div");
+reply.className="msg";
+reply.innerText="Okay sir, opening bank app...";
+
+chat.appendChild(reply);
+
+},1200);
+
+}
+
+</script>
+
+</body>
+</html>

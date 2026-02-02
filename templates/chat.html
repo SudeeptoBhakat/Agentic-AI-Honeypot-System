@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Honeypot Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}"></head>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="messages" id="messages"></div>
+
+    <div class="input-area">
+        <input id="msg" placeholder="Type message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<script src="js/chat.js"></script>
+
+</body>
+</html>
