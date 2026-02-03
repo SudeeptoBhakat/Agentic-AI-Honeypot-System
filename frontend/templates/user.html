@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Honeypot</title>
+    <link rel="stylesheet" href="{{ url_for('frontend', path='css/user.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>User Dashboard</h1>
+
+        <!-- Upload Audio -->
+        <div class="card">
+            <h3>Upload Audio File</h3>
+            <input type="file" accept="audio/*" class="file_upload">
+            <button class="upload_btn">Upload & Analyze</button>
+        </div>
+
+        <!-- Live Chat -->
+        <div class="card">
+            <h3>Live AI – Scammer Chat</h3>
+
+            <div class="chat-box">
+                <div class="msg scammer">Scammer: Your account is blocked</div>
+                <div class="msg ai">AI: Please explain the issue</div>
+            </div>
+
+            <div class="controls">
+                <button class="pause_btn">Pause</button>
+                <button class="retry">Retry</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

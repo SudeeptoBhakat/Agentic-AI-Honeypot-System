@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to right, #56ccf2, #2f80ed); */
+    background: #0f172a;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.file_upload {
+    box-shadow: 1px 1px 10px rgb(128, 128, 128), -1px -1px 10px rgb(128, 128, 128);
+
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 15px rgb(148, 147, 147), -1px -1px 5px rgb(148, 147, 147);
+    color: #fff;
+
+}
+
+
+.upload_btn {
+    padding: 8px 15px;
+    border: none;
+    background: #00aa63;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.upload_btn:hover {
+
+    background: #00fff7;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px #00fff7, -2px -2px 10px #00fff7;
+
+
+
+}
+
+
+.retry {
+    background: #f2994a;
+}
+
+.chat-box {
+    height: 180px;
+    background: #1e293b;
+    padding: 10px;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+.msg {
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    max-width: 80%;
+}
+
+.scammer {
+    background: #01242c;
+}
+
+.ai {
+    background: #02a029;
+    margin-left: auto;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.pause_btn {
+    padding: 8px 15px;
+    border: none;
+    background: #00aa63;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.pause_btn:hover {
+    background: #00aa63;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px #42eda6, -1px -1px 5px #42eda6;
+    ;
+}
+
+.retry {
+    border: none;
+    background: yellow;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.retry:hover {
+    background: yellow;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgb(243, 243, 96), -1px -1px 5px rgb(243, 243, 96);
+
+}

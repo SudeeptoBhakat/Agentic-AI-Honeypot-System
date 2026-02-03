@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('frontend', path='css/admin.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">Total Calls<br><span>1200</span></div>
+            <div class="stat">Scam Calls<br><span>430</span></div>
+            <div class="stat">Avg Risk<br><span>78%</span></div>
+            <div class="stat">Honeypot Used<br><span>310</span></div>
+        </div>
+
+        <!-- Live Calls Table -->
+        <div class="card">
+            <h3>Live Scam Calls</h3>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Number</th>
+                    <th>Risk</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>#SC101</td>
+                    <td>+91 XXXXX123</td>
+                    <td class="high">High</td>
+                    <td>Live</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Evidence -->
+        <div class="card">
+            <h3>Call Evidence</h3>
+            <audio controls></audio>
+
+            <ul>
+                <li>Bank: SBI</li>
+                <li>UPI: fraud@upi</li>
+                <li>Link: fakebank.in</li>
+                <li>Keywords: OTP, Urgent</li>
+            </ul>
+        </div>
+
+        <!-- Risk Bar -->
+
+
+
+        <div class="risk-card">
+            <h3>Risk Level</h3>
+
+            <div class="risk-percentage" id="riskValue">0%</div>
+
+            <div class="risk-bar">
+                <div class="risk-fill" id="riskFill"></div>
+            </div>
+
+            <button onclick="setRisk()">Simulate Risk</button>
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('frontend', path='js/admin.js') }}"></script>
+
+</body>
+
+</html>
